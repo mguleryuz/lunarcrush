@@ -38,7 +38,7 @@ export default async function main({
       const RESPONSES_200_DATA = JSON.parse(fs.readFileSync(itemPath, 'utf-8'))
 
       const fileBaseName = path.basename(itemPath, '.json')
-      const fileUrlSchemaName = `public/${convertToUrlSchema(fileBaseName)}`
+      const fileUrlSchemaName = `/public/${convertToUrlSchema(fileBaseName)}`
 
       // Step 3: Locate the json block for fileUrlSchemaName and add the-
       // RESPONSES_200_DATA to the DIST_FILE_DATA
@@ -49,8 +49,7 @@ export default async function main({
       // If the json block exists, add the RESPONSES_200_DATA to it
       if (jsonBlock) {
         // Add the RESPONSES_200_DATA to the json block
-        jsonBlock.get.responses['200'].content['application/json'] =
-          RESPONSES_200_DATA
+        jsonBlock.get.responses['200'].content = RESPONSES_200_DATA
       }
 
       return

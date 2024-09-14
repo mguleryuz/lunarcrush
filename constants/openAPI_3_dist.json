@@ -40,7 +40,221 @@
           "200": {
             "description": "200 successful",
             "content": {
-              "application/json": {}
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "config": {
+                      "type": "object",
+                      "properties": {
+                        "limit": {
+                          "type": "integer",
+                          "description": "Limit on the number of results",
+                          "example": 0
+                        },
+                        "sort": {
+                          "type": "string",
+                          "description": "Field used to sort the results",
+                          "example": "market_cap_rank"
+                        },
+                        "desc": {
+                          "type": "boolean",
+                          "description": "Whether the results are sorted in descending order",
+                          "example": true
+                        },
+                        "page": {
+                          "type": "integer",
+                          "description": "Page number for pagination",
+                          "example": 0
+                        },
+                        "total_rows": {
+                          "type": "integer",
+                          "description": "Total number of rows in the result set",
+                          "example": 3738
+                        },
+                        "generated": {
+                          "type": "integer",
+                          "description": "Timestamp when the data was generated",
+                          "example": 1726262462
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer",
+                            "description": "Unique identifier for the asset",
+                            "example": 1
+                          },
+                          "symbol": {
+                            "type": "string",
+                            "description": "Symbol of the asset",
+                            "example": "BTC"
+                          },
+                          "name": {
+                            "type": "string",
+                            "description": "Name of the asset",
+                            "example": "Bitcoin"
+                          },
+                          "price": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Current price of the asset",
+                            "example": 59983.20843610305
+                          },
+                          "price_btc": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Price of the asset in BTC",
+                            "example": 1
+                          },
+                          "volume_24h": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "24-hour trading volume of the asset",
+                            "example": 29659366859.354584
+                          },
+                          "volatility": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Volatility of the asset",
+                            "example": 0.0118
+                          },
+                          "circulating_supply": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Current circulating supply of the asset",
+                            "example": 19753690
+                          },
+                          "max_supply": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Maximum supply of the asset",
+                            "example": 21000000
+                          },
+                          "percent_change_1h": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Percentage change in the last 1 hour",
+                            "example": 0.51654543
+                          },
+                          "percent_change_24h": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Percentage change in the last 24 hours",
+                            "example": 3.06688689
+                          },
+                          "percent_change_7d": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Percentage change in the last 7 days",
+                            "example": 12.81488022
+                          },
+                          "market_cap": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Market capitalization of the asset",
+                            "example": 1184889704652.16
+                          },
+                          "market_cap_rank": {
+                            "type": "integer",
+                            "description": "Rank of the asset by market capitalization",
+                            "example": 1
+                          },
+                          "interactions_24h": {
+                            "type": "integer",
+                            "description": "Number of interactions in the last 24 hours",
+                            "example": 111773082
+                          },
+                          "social_volume_24h": {
+                            "type": "integer",
+                            "description": "Social media mentions in the last 24 hours",
+                            "example": 243489
+                          },
+                          "social_dominance": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Percentage of social volume represented by the asset",
+                            "example": 25.809840194361644
+                          },
+                          "market_dominance": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Percentage of market dominance held by the asset",
+                            "example": 56.492207816142766
+                          },
+                          "galaxy_score": {
+                            "type": "integer",
+                            "description": "Galaxy score of the asset",
+                            "example": 71
+                          },
+                          "galaxy_score_previous": {
+                            "type": "integer",
+                            "description": "Previous galaxy score of the asset",
+                            "example": 69
+                          },
+                          "alt_rank": {
+                            "type": "integer",
+                            "description": "Alt rank of the asset",
+                            "example": 108
+                          },
+                          "alt_rank_previous": {
+                            "type": "integer",
+                            "description": "Previous alt rank of the asset",
+                            "example": 155
+                          },
+                          "sentiment": {
+                            "type": "integer",
+                            "description": "Sentiment score for the asset",
+                            "example": 81
+                          },
+                          "categories": {
+                            "type": "string",
+                            "description": "Categories associated with the asset",
+                            "example": "layer-1"
+                          },
+                          "blockchains": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "network": {
+                                  "type": "string",
+                                  "description": "Blockchain network name",
+                                  "example": "bitcoin"
+                                },
+                                "address": {
+                                  "type": "string",
+                                  "description": "Blockchain address",
+                                  "example": "0"
+                                },
+                                "decimals": {
+                                  "type": "integer",
+                                  "description": "Number of decimals for the asset",
+                                  "example": 8
+                                }
+                              }
+                            }
+                          },
+                          "topic": {
+                            "type": "string",
+                            "description": "Topic tags associated with the asset",
+                            "example": "btc bitcoin"
+                          },
+                          "logo": {
+                            "type": "string",
+                            "description": "URL of the asset's logo",
+                            "example": "https://cdn.lunarcrush.com/bitcoin.png"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -315,7 +529,72 @@
           "200": {
             "description": "200 successful",
             "content": {
-              "application/json": {}
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "topic": {
+                            "type": "string",
+                            "description": "LunarCrush social topic. Can only include letters, numbers, spaces, #, and $",
+                            "example": "youtube"
+                          },
+                          "title": {
+                            "type": "string",
+                            "description": "The case-sensitive title of the topic or category",
+                            "example": "YouTube"
+                          },
+                          "topic_rank": {
+                            "type": "integer",
+                            "description": "LunarCrush metric for ranking a social topic relative to all other social topics",
+                            "example": 1
+                          },
+                          "topic_rank_1h_previous": {
+                            "type": "integer",
+                            "description": "The topic rank from 1 hour ago",
+                            "example": 1
+                          },
+                          "topic_rank_24h_previous": {
+                            "type": "integer",
+                            "description": "The topic rank from 24 hours ago",
+                            "example": 1
+                          },
+                          "num_contributors": {
+                            "type": "integer",
+                            "description": "The number of unique social contributors to the topic",
+                            "example": 46021
+                          },
+                          "social_dominance": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "The percent of the total social volume that this topic represents",
+                            "example": 5.67
+                          },
+                          "num_posts": {
+                            "type": "integer",
+                            "description": "Total number of posts with interactions on this topic in the last 24 hours",
+                            "example": 371561
+                          },
+                          "interactions_1h": {
+                            "type": "integer",
+                            "description": "Number of interactions in the last hour",
+                            "example": 22831735
+                          },
+                          "interactions_24h": {
+                            "type": "integer",
+                            "description": "Number of interactions in the last 24 hours",
+                            "example": 3242639403
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -375,7 +654,118 @@
           "200": {
             "description": "200 successful",
             "content": {
-              "application/json": {}
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "config": {
+                      "type": "object",
+                      "properties": {
+                        "category": {
+                          "type": "string",
+                          "description": "The category of the config",
+                          "example": "cryptocurrencies"
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "The type of config",
+                          "example": "topic"
+                        },
+                        "id": {
+                          "type": "string",
+                          "description": "The unique ID of the config",
+                          "example": "_cryptocurrencies"
+                        },
+                        "generated": {
+                          "type": "integer",
+                          "description": "Timestamp when the config was generated",
+                          "example": 1726257838
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the post",
+                            "example": "1811250011545686043"
+                          },
+                          "post_type": {
+                            "type": "string",
+                            "description": "Type of post",
+                            "example": "tweet"
+                          },
+                          "post_title": {
+                            "type": "string",
+                            "description": "The title or content of the post",
+                            "example": "🚨New to #Bitcoin? Let us help you get started with a welcome gift!"
+                          },
+                          "post_link": {
+                            "type": "string",
+                            "description": "Link to the post",
+                            "example": "https://x.com/Bybit_Official/status/1811250011545686043"
+                          },
+                          "post_image": {
+                            "type": "string",
+                            "description": "URL to the image associated with the post (if any)",
+                            "nullable": true,
+                            "example": null
+                          },
+                          "post_created": {
+                            "type": "integer",
+                            "description": "Timestamp of when the post was created",
+                            "example": 1720670628
+                          },
+                          "post_sentiment": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Sentiment score of the post",
+                            "example": 3.51
+                          },
+                          "creator_id": {
+                            "type": "string",
+                            "description": "Unique identifier of the creator",
+                            "example": "twitter::999947328621395968"
+                          },
+                          "creator_name": {
+                            "type": "string",
+                            "description": "Handle or name of the creator",
+                            "example": "Bybit_Official"
+                          },
+                          "creator_display_name": {
+                            "type": "string",
+                            "description": "Display name of the creator",
+                            "example": "Bybit"
+                          },
+                          "creator_followers": {
+                            "type": "integer",
+                            "description": "Number of followers the creator has",
+                            "example": 4615095
+                          },
+                          "creator_avatar": {
+                            "type": "string",
+                            "description": "URL to the creator's avatar",
+                            "example": "https://pbs.twimg.com/profile_images/1747237510206349312/mM2MUbQ__200x200.jpg"
+                          },
+                          "interactions_24h": {
+                            "type": "integer",
+                            "description": "Number of interactions in the last 24 hours",
+                            "example": 9577323
+                          },
+                          "interactions_total": {
+                            "type": "integer",
+                            "description": "Total number of interactions",
+                            "example": 244243936
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -393,7 +783,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           },
           {
@@ -401,7 +791,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           }
         ]
@@ -414,7 +804,101 @@
           "200": {
             "description": "200 successful",
             "content": {
-              "application/json": {}
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "config": {
+                      "type": "object",
+                      "properties": {
+                        "category": {
+                          "type": "string",
+                          "description": "The category of the config",
+                          "example": "cryptocurrencies"
+                        },
+                        "metrics": {
+                          "type": "string",
+                          "description": "Metrics type",
+                          "example": "all"
+                        },
+                        "interval": {
+                          "type": "string",
+                          "description": "The interval of time for metrics",
+                          "example": "1w"
+                        },
+                        "bucket": {
+                          "type": "string",
+                          "description": "Time bucket granularity",
+                          "example": "hour"
+                        },
+                        "start": {
+                          "type": "integer",
+                          "description": "Start timestamp of the data",
+                          "example": 1725580800
+                        },
+                        "end": {
+                          "type": "integer",
+                          "description": "End timestamp of the data",
+                          "example": 1726272000
+                        },
+                        "generated": {
+                          "type": "integer",
+                          "description": "Timestamp when the config was generated",
+                          "example": 1726258202
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "time": {
+                            "type": "integer",
+                            "description": "Timestamp of the data point",
+                            "example": 1725580800
+                          },
+                          "posts_created": {
+                            "type": "integer",
+                            "description": "Number of posts created during this time period",
+                            "example": 7656
+                          },
+                          "posts_active": {
+                            "type": "integer",
+                            "description": "Number of active posts during this time period",
+                            "example": 200592
+                          },
+                          "interactions": {
+                            "type": "integer",
+                            "description": "Number of interactions during this time period",
+                            "example": 10022366
+                          },
+                          "contributors_created": {
+                            "type": "integer",
+                            "description": "Number of new contributors during this time period",
+                            "example": 5269
+                          },
+                          "contributors_active": {
+                            "type": "integer",
+                            "description": "Number of active contributors during this time period",
+                            "example": 83751
+                          },
+                          "sentiment": {
+                            "type": "integer",
+                            "description": "Sentiment score during this time period (0-100 scale)",
+                            "example": 81
+                          },
+                          "spam": {
+                            "type": "integer",
+                            "description": "Number of spam posts during this time period",
+                            "example": 1090
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -448,7 +932,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           },
           {
@@ -456,7 +940,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           }
         ]
@@ -561,7 +1045,170 @@
           "200": {
             "description": "200 successful",
             "content": {
-              "application/json": {}
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "config": {
+                      "type": "object",
+                      "properties": {
+                        "coin": {
+                          "type": "integer",
+                          "description": "The coin identifier",
+                          "example": 2
+                        },
+                        "topic": {
+                          "type": "string",
+                          "description": "The topic or asset associated with the data",
+                          "example": "ethereum"
+                        },
+                        "metrics": {
+                          "type": "string",
+                          "description": "The metrics type",
+                          "example": "all"
+                        },
+                        "interval": {
+                          "type": "string",
+                          "description": "The time interval for data",
+                          "example": "1w"
+                        },
+                        "bucket": {
+                          "type": "string",
+                          "description": "The time bucket granularity",
+                          "example": "hour"
+                        },
+                        "start": {
+                          "type": "integer",
+                          "description": "Start timestamp of the data",
+                          "example": 1725580800
+                        },
+                        "end": {
+                          "type": "integer",
+                          "description": "End timestamp of the data",
+                          "example": 1726258308
+                        },
+                        "generated": {
+                          "type": "integer",
+                          "description": "Timestamp when the config was generated",
+                          "example": 1726258325
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "time": {
+                            "type": "integer",
+                            "description": "Timestamp of the data point",
+                            "example": 1725580800
+                          },
+                          "open": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Opening price at the time",
+                            "example": 2367.7010305058
+                          },
+                          "close": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Closing price at the time",
+                            "example": 2371.745391597675
+                          },
+                          "high": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Highest price within the period",
+                            "example": 2375.6413239537655
+                          },
+                          "low": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Lowest price within the period",
+                            "example": 2357.827536175019
+                          },
+                          "volume_24h": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "The 24-hour trading volume",
+                            "example": 13667172064.96
+                          },
+                          "market_cap": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Market capitalization at the time",
+                            "example": 285265237159.94
+                          },
+                          "circulating_supply": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "The circulating supply at the time",
+                            "example": 120315124.32
+                          },
+                          "sentiment": {
+                            "type": "integer",
+                            "description": "Sentiment score during this period (0-100 scale)",
+                            "example": 83
+                          },
+                          "spam": {
+                            "type": "integer",
+                            "description": "Number of spam posts during this period",
+                            "example": 120
+                          },
+                          "galaxy_score": {
+                            "type": "integer",
+                            "description": "Galaxy score metric at the time",
+                            "example": 69
+                          },
+                          "volatility": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Volatility metric at the time",
+                            "example": 0.0137
+                          },
+                          "alt_rank": {
+                            "type": "integer",
+                            "description": "Alt rank metric at the time",
+                            "example": 346
+                          },
+                          "contributors_active": {
+                            "type": "integer",
+                            "description": "Number of active contributors during this period",
+                            "example": 7345
+                          },
+                          "contributors_created": {
+                            "type": "integer",
+                            "description": "Number of new contributors during this period",
+                            "example": 429
+                          },
+                          "posts_active": {
+                            "type": "integer",
+                            "description": "Number of active posts during this period",
+                            "example": 12273
+                          },
+                          "posts_created": {
+                            "type": "integer",
+                            "description": "Number of posts created during this period",
+                            "example": 518
+                          },
+                          "interactions": {
+                            "type": "integer",
+                            "description": "Number of interactions during this period",
+                            "example": 901506
+                          },
+                          "social_dominance": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Social dominance percentage at the time",
+                            "example": 6.118389566882029
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -595,7 +1242,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           },
           {
@@ -603,7 +1250,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           }
         ]
@@ -616,7 +1263,129 @@
           "200": {
             "description": "200 successful",
             "content": {
-              "application/json": {}
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "config": {
+                      "type": "object",
+                      "properties": {
+                        "coin": {
+                          "type": "integer",
+                          "description": "LunarCrush internal ID for the coin",
+                          "example": 2
+                        },
+                        "generated": {
+                          "type": "integer",
+                          "description": "A Unix timestamp (in seconds) when the data was generated",
+                          "example": 1726263002
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "description": "LunarCrush internal ID for the asset",
+                          "example": 2
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "The full name of the asset",
+                          "example": "Ethereum"
+                        },
+                        "symbol": {
+                          "type": "string",
+                          "description": "The symbol for the asset",
+                          "example": "ETH"
+                        },
+                        "price": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "Current price of the asset in USD",
+                          "example": 2436.856
+                        },
+                        "price_btc": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "Current price of the asset in BTC",
+                          "example": 0.04
+                        },
+                        "market_cap": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "Total dollar market value of all circulating supply",
+                          "example": 293233262885.9
+                        },
+                        "percent_change_24h": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "Percent change in price since 24 hours ago",
+                          "example": 3.918
+                        },
+                        "percent_change_7d": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "Percent change in price since 7 days ago",
+                          "example": 11.019
+                        },
+                        "percent_change_30d": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "Percent change in price since 30 days ago",
+                          "example": -8.906
+                        },
+                        "volume_24h": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "24-hour trading volume in USD",
+                          "example": 13122276948.819
+                        },
+                        "max_supply": {
+                          "type": "number",
+                          "nullable": true,
+                          "description": "The maximum supply of the asset, if available",
+                          "example": null
+                        },
+                        "circulating_supply": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "Circulating supply of the asset",
+                          "example": 120332633.33
+                        },
+                        "close": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "Closing price for the time period",
+                          "example": 2436.856
+                        },
+                        "galaxy_score": {
+                          "type": "integer",
+                          "description": "A proprietary score based on technical and social indicators",
+                          "example": 70
+                        },
+                        "alt_rank": {
+                          "type": "integer",
+                          "description": "Alt rank of the asset, based on performance relative to other assets",
+                          "example": 65
+                        },
+                        "volatility": {
+                          "type": "number",
+                          "format": "float",
+                          "description": "Standard deviation of the price (volatility)",
+                          "example": 0.01
+                        },
+                        "market_cap_rank": {
+                          "type": "integer",
+                          "description": "Rank of the asset by market capitalization",
+                          "example": 2
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -639,7 +1408,82 @@
           "200": {
             "description": "200 successful",
             "content": {
-              "application/json": {}
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the post",
+                            "example": "1834153650874449983"
+                          },
+                          "post_type": {
+                            "type": "string",
+                            "description": "Type of post",
+                            "example": "tweet"
+                          },
+                          "post_title": {
+                            "type": "string",
+                            "description": "The title or content of the post",
+                            "example": "The legacy media is extremely left-biased"
+                          },
+                          "post_created": {
+                            "type": "integer",
+                            "description": "Timestamp of when the post was created",
+                            "example": 1726131281
+                          },
+                          "post_sentiment": {
+                            "type": "number",
+                            "format": "float",
+                            "description": "Sentiment score of the post",
+                            "example": 2.83
+                          },
+                          "creator_id": {
+                            "type": "string",
+                            "description": "Unique identifier of the creator",
+                            "example": "twitter::44196397"
+                          },
+                          "creator_name": {
+                            "type": "string",
+                            "description": "Handle or name of the creator",
+                            "example": "elonmusk"
+                          },
+                          "creator_display_name": {
+                            "type": "string",
+                            "description": "Display name of the creator",
+                            "example": "Elon Musk"
+                          },
+                          "creator_followers": {
+                            "type": "integer",
+                            "description": "Number of followers the creator has",
+                            "example": 197554605
+                          },
+                          "creator_avatar": {
+                            "type": "string",
+                            "description": "URL to the creator's avatar",
+                            "example": "https://pbs.twimg.com/profile_images/1815749056821346304/jS8I28PL_200x200.jpg"
+                          },
+                          "interactions_24h": {
+                            "type": "integer",
+                            "description": "Number of interactions in the last 24 hours",
+                            "example": 0
+                          },
+                          "interactions_total": {
+                            "type": "integer",
+                            "description": "Total number of interactions",
+                            "example": 63986269
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -665,7 +1509,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           },
           {
@@ -673,7 +1517,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           }
         ]
@@ -728,7 +1572,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           },
           {
@@ -736,7 +1580,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           }
         ]
@@ -837,7 +1681,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           },
           {
@@ -845,7 +1689,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           }
         ]
@@ -881,7 +1725,31 @@
           "200": {
             "description": "200 successful",
             "content": {
-              "application/json": {}
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "time": {
+                            "type": "integer",
+                            "description": "Timestamp of the interaction",
+                            "example": 1707588740
+                          },
+                          "interactions": {
+                            "type": "integer",
+                            "description": "Number of interactions at the given time",
+                            "example": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -912,7 +1780,91 @@
           "200": {
             "description": "200 successful",
             "content": {
-              "application/json": {}
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "Type of the post",
+                      "example": "tweet"
+                    },
+                    "id": {
+                      "type": "string",
+                      "description": "Unique identifier of the post",
+                      "example": "1756378079893782591"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Title or main content of the post",
+                      "example": "Social activity is 👆 across the board today."
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "Description or additional content of the post",
+                      "nullable": true,
+                      "example": null
+                    },
+                    "extraText": {
+                      "type": "string",
+                      "description": "Extra text associated with the post",
+                      "nullable": true,
+                      "example": null
+                    },
+                    "image": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "src": {
+                          "type": "string",
+                          "description": "URL to the image",
+                          "example": "https://pbs.twimg.com/media/GF_n3GQaoAA23sT.jpg"
+                        },
+                        "width": {
+                          "type": "integer",
+                          "description": "Width of the image in pixels",
+                          "example": 2048
+                        },
+                        "height": {
+                          "type": "integer",
+                          "description": "Height of the image in pixels",
+                          "example": 989
+                        }
+                      }
+                    },
+                    "video": {
+                      "type": "string",
+                      "description": "URL to the video (if any)",
+                      "nullable": true,
+                      "example": null
+                    },
+                    "images": {
+                      "type": "array",
+                      "description": "Additional images associated with the post (if any)",
+                      "nullable": true,
+                      "items": {
+                        "type": "string"
+                      },
+                      "example": null
+                    },
+                    "creator_id": {
+                      "type": "string",
+                      "description": "Unique identifier of the post creator",
+                      "example": "twitter::988992203568562176"
+                    },
+                    "creator_name": {
+                      "type": "string",
+                      "description": "Handle or name of the creator",
+                      "example": "LunarCrush"
+                    },
+                    "creator_display_name": {
+                      "type": "string",
+                      "description": "Display name of the creator",
+                      "example": "LunarCrush"
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -1085,7 +2037,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           },
           {
@@ -1093,7 +2045,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           }
         ]
@@ -1193,7 +2145,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           },
           {
@@ -1201,7 +2153,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           }
         ]
@@ -1248,7 +2200,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           },
           {
@@ -1256,7 +2208,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "timestamp"
+              "type": "string"
             }
           }
         ]
