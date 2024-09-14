@@ -1,5 +1,5 @@
 /* tslint:disable */
-
+/* eslint-disable */
 export * from './PublicCategoryCategoryPostsV1Get200Response'
 export * from './PublicCategoryCategoryPostsV1Get200ResponseConfig'
 export * from './PublicCategoryCategoryPostsV1Get200ResponseDataInner'
