@@ -1,0 +1,10 @@
+done:
+  - '/public/category/:category/posts/v1'
+  - '/public/category/:category/time-series/v1'
+  - '/public/coins/:coin/time-series/v2'
+  - '/public/creator/:network/:id/posts/v1'
+  - '/public/posts/:post_type/:post_id/time-series/v1'
+  - '/public/posts/:post_type/:post_id/v1'
+  - '/public/topics/list/v1'
+  - '/public/coins/list/v2'
+  - '/public/coins/:coin/v1'
