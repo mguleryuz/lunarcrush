@@ -1,0 +1,72 @@
+application/json:
+  schema:
+    type: object
+    properties:
+      config:
+        type: object
+        properties:
+          category:
+            type: string
+            description: 'The category of the config'
+            example: 'cryptocurrencies'
+          metrics:
+            type: string
+            description: 'Metrics type'
+            example: 'all'
+          interval:
+            type: string
+            description: 'The interval of time for metrics'
+            example: '1w'
+          bucket:
+            type: string
+            description: 'Time bucket granularity'
+            example: 'hour'
+          start:
+            type: integer
+            description: 'Start timestamp of the data'
+            example: 1725580800
+          end:
+            type: integer
+            description: 'End timestamp of the data'
+            example: 1726272000
+          generated:
+            type: integer
+            description: 'Timestamp when the config was generated'
+            example: 1726258202
+      data:
+        type: array
+        items:
+          type: object
+          properties:
+            time:
+              type: integer
+              description: 'Timestamp of the data point'
+              example: 1725580800
+            posts_created:
+              type: integer
+              description: 'Number of posts created during this time period'
+              example: 7656
+            posts_active:
+              type: integer
+              description: 'Number of active posts during this time period'
+              example: 200592
+            interactions:
+              type: integer
+              description: 'Number of interactions during this time period'
+              example: 10022366
+            contributors_created:
+              type: integer
+              description: 'Number of new contributors during this time period'
+              example: 5269
+            contributors_active:
+              type: integer
+              description: 'Number of active contributors during this time period'
+              example: 83751
+            sentiment:
+              type: integer
+              description: 'Sentiment score during this time period (0-100 scale)'
+              example: 81
+            spam:
+              type: integer
+              description: 'Number of spam posts during this time period'
+              example: 1090

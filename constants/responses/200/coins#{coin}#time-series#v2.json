@@ -1,0 +1,166 @@
+{
+  "application/json": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "config": {
+          "type": "object",
+          "properties": {
+            "coin": {
+              "type": "integer",
+              "description": "The coin identifier",
+              "example": 2
+            },
+            "topic": {
+              "type": "string",
+              "description": "The topic or asset associated with the data",
+              "example": "ethereum"
+            },
+            "metrics": {
+              "type": "string",
+              "description": "The metrics type",
+              "example": "all"
+            },
+            "interval": {
+              "type": "string",
+              "description": "The time interval for data",
+              "example": "1w"
+            },
+            "bucket": {
+              "type": "string",
+              "description": "The time bucket granularity",
+              "example": "hour"
+            },
+            "start": {
+              "type": "integer",
+              "description": "Start timestamp of the data",
+              "example": 1725580800
+            },
+            "end": {
+              "type": "integer",
+              "description": "End timestamp of the data",
+              "example": 1726258308
+            },
+            "generated": {
+              "type": "integer",
+              "description": "Timestamp when the config was generated",
+              "example": 1726258325
+            }
+          }
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "time": {
+                "type": "integer",
+                "description": "Timestamp of the data point",
+                "example": 1725580800
+              },
+              "open": {
+                "type": "number",
+                "format": "float",
+                "description": "Opening price at the time",
+                "example": 2367.7010305058
+              },
+              "close": {
+                "type": "number",
+                "format": "float",
+                "description": "Closing price at the time",
+                "example": 2371.745391597675
+              },
+              "high": {
+                "type": "number",
+                "format": "float",
+                "description": "Highest price within the period",
+                "example": 2375.6413239537655
+              },
+              "low": {
+                "type": "number",
+                "format": "float",
+                "description": "Lowest price within the period",
+                "example": 2357.827536175019
+              },
+              "volume_24h": {
+                "type": "number",
+                "format": "float",
+                "description": "The 24-hour trading volume",
+                "example": 13667172064.96
+              },
+              "market_cap": {
+                "type": "number",
+                "format": "float",
+                "description": "Market capitalization at the time",
+                "example": 285265237159.94
+              },
+              "circulating_supply": {
+                "type": "number",
+                "format": "float",
+                "description": "The circulating supply at the time",
+                "example": 120315124.32
+              },
+              "sentiment": {
+                "type": "integer",
+                "description": "Sentiment score during this period (0-100 scale)",
+                "example": 83
+              },
+              "spam": {
+                "type": "integer",
+                "description": "Number of spam posts during this period",
+                "example": 120
+              },
+              "galaxy_score": {
+                "type": "integer",
+                "description": "Galaxy score metric at the time",
+                "example": 69
+              },
+              "volatility": {
+                "type": "number",
+                "format": "float",
+                "description": "Volatility metric at the time",
+                "example": 0.0137
+              },
+              "alt_rank": {
+                "type": "integer",
+                "description": "Alt rank metric at the time",
+                "example": 346
+              },
+              "contributors_active": {
+                "type": "integer",
+                "description": "Number of active contributors during this period",
+                "example": 7345
+              },
+              "contributors_created": {
+                "type": "integer",
+                "description": "Number of new contributors during this period",
+                "example": 429
+              },
+              "posts_active": {
+                "type": "integer",
+                "description": "Number of active posts during this period",
+                "example": 12273
+              },
+              "posts_created": {
+                "type": "integer",
+                "description": "Number of posts created during this period",
+                "example": 518
+              },
+              "interactions": {
+                "type": "integer",
+                "description": "Number of interactions during this period",
+                "example": 901506
+              },
+              "social_dominance": {
+                "type": "number",
+                "format": "float",
+                "description": "Social dominance percentage at the time",
+                "example": 6.118389566882029
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -39,6 +39,7 @@
     "release:alpha": "standard-version -a --prerelease alpha --skip.changelog",
     "release:beta": "standard-version -a --prerelease beta --skip.changelog",
     "release:pub": "git push --follow-tags origin main",
+    "fix:paths": "bun tools/compile/fixPathFormats.ts",
     "compile:api": "tools/replace_path_params.sh && openapi-generator-cli generate -i tools/openAPI_3.yaml -g typescript-fetch -o src/api/build && prettier --write src/lib/lunarcrush > /dev/null 2>&1"
   },
   "lint-staged": {

@@ -1,0 +1,58 @@
+application/json:
+  schema:
+    type: object
+    properties:
+      data:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: string
+              description: 'Unique identifier of the post'
+              example: '1834153650874449983'
+            post_type:
+              type: string
+              description: 'Type of post'
+              example: 'tweet'
+            post_title:
+              type: string
+              description: 'The title or content of the post'
+              example: 'The legacy media is extremely left-biased'
+            post_created:
+              type: integer
+              description: 'Timestamp of when the post was created'
+              example: 1726131281
+            post_sentiment:
+              type: number
+              format: float
+              description: 'Sentiment score of the post'
+              example: 2.83
+            creator_id:
+              type: string
+              description: 'Unique identifier of the creator'
+              example: 'twitter::44196397'
+            creator_name:
+              type: string
+              description: 'Handle or name of the creator'
+              example: 'elonmusk'
+            creator_display_name:
+              type: string
+              description: 'Display name of the creator'
+              example: 'Elon Musk'
+            creator_followers:
+              type: integer
+              description: 'Number of followers the creator has'
+              example: 197554605
+            creator_avatar:
+              type: string
+              description: "URL to the creator's avatar"
+              example: 'https://pbs.twimg.com/profile_images/1815749056821346304/jS8I28PL_200x200.jpg'
+            interactions_24h:
+              type: integer
+              description: 'Number of interactions in the last 24 hours'
+              example: 0
+            interactions_total:
+              type: integer
+              description: 'Total number of interactions'
+              example: 63986269

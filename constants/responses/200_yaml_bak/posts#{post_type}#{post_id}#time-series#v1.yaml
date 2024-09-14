@@ -1,0 +1,17 @@
+application/json:
+  schema:
+    type: object
+    properties:
+      data:
+        type: array
+        items:
+          type: object
+          properties:
+            time:
+              type: integer
+              description: 'Timestamp of the interaction'
+              example: 1707588740
+            interactions:
+              type: integer
+              description: 'Number of interactions at the given time'
+              example: 1

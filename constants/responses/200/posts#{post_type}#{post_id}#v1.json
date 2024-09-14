@@ -1,0 +1,87 @@
+{
+  "application/json": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Type of the post",
+          "example": "tweet"
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the post",
+          "example": "1756378079893782591"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title or main content of the post",
+          "example": "Social activity is 👆 across the board today."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description or additional content of the post",
+          "nullable": true,
+          "example": null
+        },
+        "extraText": {
+          "type": "string",
+          "description": "Extra text associated with the post",
+          "nullable": true,
+          "example": null
+        },
+        "image": {
+          "type": "object",
+          "nullable": true,
+          "properties": {
+            "src": {
+              "type": "string",
+              "description": "URL to the image",
+              "example": "https://pbs.twimg.com/media/GF_n3GQaoAA23sT.jpg"
+            },
+            "width": {
+              "type": "integer",
+              "description": "Width of the image in pixels",
+              "example": 2048
+            },
+            "height": {
+              "type": "integer",
+              "description": "Height of the image in pixels",
+              "example": 989
+            }
+          }
+        },
+        "video": {
+          "type": "string",
+          "description": "URL to the video (if any)",
+          "nullable": true,
+          "example": null
+        },
+        "images": {
+          "type": "array",
+          "description": "Additional images associated with the post (if any)",
+          "nullable": true,
+          "items": {
+            "type": "string"
+          },
+          "example": null
+        },
+        "creator_id": {
+          "type": "string",
+          "description": "Unique identifier of the post creator",
+          "example": "twitter::988992203568562176"
+        },
+        "creator_name": {
+          "type": "string",
+          "description": "Handle or name of the creator",
+          "example": "LunarCrush"
+        },
+        "creator_display_name": {
+          "type": "string",
+          "description": "Display name of the creator",
+          "example": "LunarCrush"
+        }
+      }
+    }
+  }
+}

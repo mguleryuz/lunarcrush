@@ -1,0 +1,125 @@
+{
+  "application/json": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "config": {
+          "type": "object",
+          "properties": {
+            "coin": {
+              "type": "integer",
+              "description": "LunarCrush internal ID for the coin",
+              "example": 2
+            },
+            "generated": {
+              "type": "integer",
+              "description": "A Unix timestamp (in seconds) when the data was generated",
+              "example": 1726263002
+            }
+          }
+        },
+        "data": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "description": "LunarCrush internal ID for the asset",
+              "example": 2
+            },
+            "name": {
+              "type": "string",
+              "description": "The full name of the asset",
+              "example": "Ethereum"
+            },
+            "symbol": {
+              "type": "string",
+              "description": "The symbol for the asset",
+              "example": "ETH"
+            },
+            "price": {
+              "type": "number",
+              "format": "float",
+              "description": "Current price of the asset in USD",
+              "example": 2436.856
+            },
+            "price_btc": {
+              "type": "number",
+              "format": "float",
+              "description": "Current price of the asset in BTC",
+              "example": 0.04
+            },
+            "market_cap": {
+              "type": "number",
+              "format": "float",
+              "description": "Total dollar market value of all circulating supply",
+              "example": 293233262885.9
+            },
+            "percent_change_24h": {
+              "type": "number",
+              "format": "float",
+              "description": "Percent change in price since 24 hours ago",
+              "example": 3.918
+            },
+            "percent_change_7d": {
+              "type": "number",
+              "format": "float",
+              "description": "Percent change in price since 7 days ago",
+              "example": 11.019
+            },
+            "percent_change_30d": {
+              "type": "number",
+              "format": "float",
+              "description": "Percent change in price since 30 days ago",
+              "example": -8.906
+            },
+            "volume_24h": {
+              "type": "number",
+              "format": "float",
+              "description": "24-hour trading volume in USD",
+              "example": 13122276948.819
+            },
+            "max_supply": {
+              "type": "number",
+              "nullable": true,
+              "description": "The maximum supply of the asset, if available",
+              "example": null
+            },
+            "circulating_supply": {
+              "type": "number",
+              "format": "float",
+              "description": "Circulating supply of the asset",
+              "example": 120332633.33
+            },
+            "close": {
+              "type": "number",
+              "format": "float",
+              "description": "Closing price for the time period",
+              "example": 2436.856
+            },
+            "galaxy_score": {
+              "type": "integer",
+              "description": "A proprietary score based on technical and social indicators",
+              "example": 70
+            },
+            "alt_rank": {
+              "type": "integer",
+              "description": "Alt rank of the asset, based on performance relative to other assets",
+              "example": 65
+            },
+            "volatility": {
+              "type": "number",
+              "format": "float",
+              "description": "Standard deviation of the price (volatility)",
+              "example": 0.01
+            },
+            "market_cap_rank": {
+              "type": "integer",
+              "description": "Rank of the asset by market capitalization",
+              "example": 2
+            }
+          }
+        }
+      }
+    }
+  }
+}

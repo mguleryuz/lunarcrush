@@ -1,0 +1,50 @@
+application/json:
+  schema:
+    type: object
+    properties:
+      data:
+        type: array
+        items:
+          type: object
+          properties:
+            topic:
+              type: string
+              description: 'LunarCrush social topic. Can only include letters, numbers, spaces, #, and $'
+              example: 'youtube'
+            title:
+              type: string
+              description: 'The case-sensitive title of the topic or category'
+              example: 'YouTube'
+            topic_rank:
+              type: integer
+              description: 'LunarCrush metric for ranking a social topic relative to all other social topics'
+              example: 1
+            topic_rank_1h_previous:
+              type: integer
+              description: 'The topic rank from 1 hour ago'
+              example: 1
+            topic_rank_24h_previous:
+              type: integer
+              description: 'The topic rank from 24 hours ago'
+              example: 1
+            num_contributors:
+              type: integer
+              description: 'The number of unique social contributors to the topic'
+              example: 46021
+            social_dominance:
+              type: number
+              format: float
+              description: 'The percent of the total social volume that this topic represents'
+              example: 5.67
+            num_posts:
+              type: integer
+              description: 'Total number of posts with interactions on this topic in the last 24 hours'
+              example: 371561
+            interactions_1h:
+              type: integer
+              description: 'Number of interactions in the last hour'
+              example: 22831735
+            interactions_24h:
+              type: integer
+              description: 'Number of interactions in the last 24 hours'
+              example: 3242639403
