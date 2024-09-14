@@ -17,12 +17,43 @@ This package provides a type-safe SDK for interacting with the LunarCrush API. T
 
 Check out the [Changelog](./CHANGELOG.md) to see what changed in the latest releases.
 
-### Install SDK Dependencies
+**Important Note**: This SDK only Support ESM (ECMAScript Modules).
+
+## Quick Start
+
+### Install the SDK
 
 You can install the LunarCrush SDK using Bun:
 
 ```bash
 bun add lunarcrush
+```
+
+### Use the SDK
+
+Here's an example of how to use the SDK to fetch the latest data for Bitcoin:
+
+```typescript
+import { LunarCrushAPIConfiguration, LunarCrushAPI } from 'lunarcrush'
+
+// Set up the client with the API key
+const config = new LunarCrushAPIConfiguration({
+  basePath: 'https://lunarcrush.com/api4',
+  headers: {
+    Authorization: `Bearer ${apiKey}`,
+  },
+})
+
+// Initialize the API client
+const apiClient = new LunarCrushAPI(config)
+
+// Use the API client to call a method
+const response = await apiClient.publicCoinsCoinV1Get({
+  coin: '1',
+})
+
+// Log the response
+console.log('API response:', response)
 ```
 
 ## Install dependencies for Contributions
