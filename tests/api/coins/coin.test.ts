@@ -1,5 +1,5 @@
 import { expect, describe, it } from 'bun:test'
-import { Configuration, DefaultApi, ResponseError } from '@/lib/lunarcrush' // Adjust to your SDK path
+import { Configuration, DefaultApi, ResponseError } from '@' // Adjust to your SDK path
 
 describe('API Client Tests', () => {
   const apiKey = process.env.LUNAR_CRUSH_API_KEY
