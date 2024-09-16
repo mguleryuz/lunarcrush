@@ -1,14 +1,14 @@
 import { promises as fs } from 'fs'
 
+// Step 0: Define unwanted types and their replacements
+const unwantedTypes = [{ value: 'timestamp', replacement: 'number' }]
+
 export default async function main({ DIST_FILE }: { DIST_FILE: string }) {
   try {
     // Step 1: Read the file as a raw string asynchronously
     let fileContent = await fs.readFile(DIST_FILE, 'utf-8')
 
-    // Step 2: Define unwanted types and their replacements
-    const unwantedTypes = [{ value: 'timestamp', replacement: 'string' }]
-
-    // Step 3: Loop through each unwanted type and apply the replacement in the string
+    // Step 2: Loop through each unwanted type and apply the replacement in the string
     unwantedTypes.forEach(({ value, replacement }) => {
       // Enhanced regex: Only replace occurrences where "type": "<unwanted>"
       const regex = new RegExp(`"type"\\s*:\\s*"(?:${value})"`, 'g')
@@ -26,7 +26,7 @@ export default async function main({ DIST_FILE }: { DIST_FILE: string }) {
       fileContent = fileContent.replace(regex, `"type": "${replacement}"`)
     })
 
-    // Step 4: Write the modified content back to the file asynchronously
+    // Step 3: Write the modified content back to the file asynchronously
     await fs.writeFile(DIST_FILE, fileContent)
 
     console.log(`Replacements made and written to ${DIST_FILE}`)

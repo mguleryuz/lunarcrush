@@ -55,16 +55,16 @@ export interface PublicCategoryCategoryNewsV1GetRequest {
 
 export interface PublicCategoryCategoryPostsV1GetRequest {
   category: string
-  start?: string
-  end?: string
+  start?: number
+  end?: number
 }
 
 export interface PublicCategoryCategoryTimeSeriesV1GetRequest {
   category: string
   bucket?: string
   interval?: string
-  start?: string
-  end?: string
+  start?: number
+  end?: number
 }
 
 export interface PublicCategoryCategoryTopicsV1GetRequest {
@@ -87,8 +87,8 @@ export interface PublicCoinsCoinTimeSeriesV2GetRequest {
   coin: string
   bucket?: string
   interval?: string
-  start?: string
-  end?: string
+  start?: number
+  end?: number
 }
 
 export interface PublicCoinsCoinV1GetRequest {
@@ -105,8 +105,8 @@ export interface PublicCoinsListV2GetRequest {
 export interface PublicCreatorNetworkIdPostsV1GetRequest {
   network: string
   id: string
-  start?: string
-  end?: string
+  start?: number
+  end?: number
 }
 
 export interface PublicCreatorNetworkIdTimeSeriesV1GetRequest {
@@ -114,8 +114,8 @@ export interface PublicCreatorNetworkIdTimeSeriesV1GetRequest {
   id: string
   bucket?: string
   interval?: string
-  start?: string
-  end?: string
+  start?: number
+  end?: number
 }
 
 export interface PublicCreatorNetworkIdV1GetRequest {
@@ -138,8 +138,8 @@ export interface PublicNftsNftTimeSeriesV2GetRequest {
   nft: string
   bucket?: string
   interval?: string
-  start?: string
-  end?: string
+  start?: number
+  end?: number
 }
 
 export interface PublicNftsNftV1GetRequest {
@@ -196,8 +196,8 @@ export interface PublicStocksStockTimeSeriesV2GetRequest {
   stock: string
   bucket?: string
   interval?: string
-  start?: string
-  end?: string
+  start?: number
+  end?: number
 }
 
 export interface PublicStocksStockV1GetRequest {
@@ -214,16 +214,16 @@ export interface PublicTopicTopicNewsV1GetRequest {
 
 export interface PublicTopicTopicPostsV1GetRequest {
   topic: string
-  start?: string
-  end?: string
+  start?: number
+  end?: number
 }
 
 export interface PublicTopicTopicTimeSeriesV1GetRequest {
   topic: string
   bucket?: string
   interval?: string
-  start?: string
-  end?: string
+  start?: number
+  end?: number
 }
 
 export interface PublicTopicTopicV1GetRequest {

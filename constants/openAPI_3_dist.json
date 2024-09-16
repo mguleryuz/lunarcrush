@@ -783,7 +783,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           },
           {
@@ -791,7 +791,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           }
         ]
@@ -932,7 +932,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           },
           {
@@ -940,7 +940,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           }
         ]
@@ -1242,7 +1242,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           },
           {
@@ -1250,7 +1250,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           }
         ]
@@ -1509,7 +1509,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           },
           {
@@ -1517,7 +1517,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           }
         ]
@@ -1572,7 +1572,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           },
           {
@@ -1580,7 +1580,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           }
         ]
@@ -1681,7 +1681,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           },
           {
@@ -1689,7 +1689,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           }
         ]
@@ -2037,7 +2037,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           },
           {
@@ -2045,7 +2045,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           }
         ]
@@ -2145,7 +2145,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           },
           {
@@ -2153,7 +2153,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           }
         ]
@@ -2200,7 +2200,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           },
           {
@@ -2208,7 +2208,7 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string"
+              "type": "number"
             }
           }
         ]
